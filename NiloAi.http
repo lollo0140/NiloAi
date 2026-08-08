@@ -1,0 +1,6 @@
+@NiloAi_HostAddress = http://localhost:5244
+
+GET {{NiloAi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
