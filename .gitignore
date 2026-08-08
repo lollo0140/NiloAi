@@ -1,0 +1,27 @@
+bin
+obj
+model/gemma.gguf
+
+ClientApp/node_modules
+
+# Output
+ClientApp/.output
+ClientApp/.vercel
+ClientApp/.netlify
+.wrangler
+ClientApp/.svelte-kit
+ClientApp/build
+
+# OS
+ClientApp/.DS_Store
+ClientApp/Thumbs.db
+
+# Env
+ClientApp/.env
+ClientApp/.env.*
+ClientApp/!.env.example
+ClientApp/!.env.test
+
+# Vite
+ClientApp/vite.config.js.timestamp-*
+ClientApp/vite.config.ts.timestamp-*
