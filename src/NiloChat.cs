@@ -28,6 +28,13 @@ namespace NiloAI.src
             inferenceParams = new InferenceParams
             {
                 MaxTokens = 1024,
+
+                AntiPrompts = new List<string>
+                    {
+                        "User:",
+                        "user:"
+                    },
+
                 SamplingPipeline = new DefaultSamplingPipeline()
             };
 
@@ -45,9 +52,12 @@ namespace NiloAI.src
 
             var S = chatSession.ChatAsync(new ChatHistory.Message(AuthorRole.User, userInput), inferenceParams);
 
+
+            System.Console.WriteLine("building responce");
             await foreach (var text in S)
             {
                 res += text;
+                Console.Write(text);
             }
 
             return res;
